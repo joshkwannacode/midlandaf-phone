@@ -5,7 +5,9 @@ export default function Searchbar() {
     return (
         <>
             <div className="search-bar-main">
-                <input type="text" id="search" name="search" placeholder="Search"/>
+            <i class="fa fa-search"></i>
+                {/* <button type="submit"><i class="fa fa-search"></i></button> */}
+                <input type="text" id="search" name="search" placeholder="Search"/>    
             </div>
 
             <div className="select-info-main">

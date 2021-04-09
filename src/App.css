@@ -1,7 +1,9 @@
 *:focus {
   outline: none;
 }
-
+i{
+  margin-top:9px;
+}
 .select-info-main{
   display:flex;
   flex-direction: row;
