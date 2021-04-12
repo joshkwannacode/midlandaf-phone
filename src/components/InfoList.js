@@ -10,20 +10,22 @@ export default function InfoList() {
                 <p>Area code is (432) unless otherwise noted.</p>
 
                 {data.map(a=>{return(
-                    <>
-                    <div>{a.mainName}</div>
+                    <div>
+                    <h3 className="phone-num-main-name">{a.mainName}</h3>
+                    <div className="phone-num-main">
+
                     {a.sub.map(b=>{return(
                         <div>
-                            <p>{b.subName}</p>
+                            <h4>{b.subName}</h4>
                             {b.subDetails.map(c=>{return(
-                                <ol>
-                                    <li>{c.item}</li>
-                                    <li>{c.itemNum}</li>
-                                </ol>
+                                <ul>
+                                    <li>{c.item}: {c.itemNum}</li>
+                                </ul>
                             )})}
                         </div>
                     )})}
-                    </>
+                    </div>
+                    </div>
                 )})}
         </div>
     )

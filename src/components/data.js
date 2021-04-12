@@ -67,6 +67,75 @@ const data = [
                     ]
                 
             },
+            {
+                subName:"City of Midland2",
+                subDetails:
+                    [
+                        {item:"Administrative Service",
+                        itemNum:"685-7251"},
+                        {item:"Air & Space Port,Midland International",
+                        itemNum:"560-2200"},
+                        {item:"Animal Control",
+                        itemNum:"685-7420"},
+                        {item:"Attorney",
+                        itemNum:"685-7253"},
+                        {item:"Auditor",
+                        itemNum:"685-7478"},
+                        {item:"Building Inspections",
+                        itemNum:"685-7390"},
+                        {item:"Building Permits",
+                        itemNum:"685-7390"},
+                        {item:"Code Enforcement",
+                        itemNum:"685-7410"},
+                    ]
+                
+            },
+            {
+                subName:"City of Midland3",
+                subDetails:
+                    [
+                        {item:"Administrative Service",
+                        itemNum:"685-7251"},
+                        {item:"Air & Space Port,Midland International",
+                        itemNum:"560-2200"},
+                        {item:"Animal Control",
+                        itemNum:"685-7420"},
+                        {item:"Attorney",
+                        itemNum:"685-7253"},
+                        {item:"Auditor",
+                        itemNum:"685-7478"},
+                        {item:"Building Inspections",
+                        itemNum:"685-7390"},
+                        {item:"Building Permits",
+                        itemNum:"685-7390"},
+                        {item:"Code Enforcement",
+                        itemNum:"685-7410"},
+                    ]
+                
+            },
+            {
+                subName:"City of Midland4",
+                subDetails:
+                    [
+                        {item:"Administrative Service",
+                        itemNum:"685-7251"},
+                        {item:"Air & Space Port,Midland International",
+                        itemNum:"560-2200"},
+                        {item:"Animal Control",
+                        itemNum:"685-7420"},
+                        {item:"Attorney",
+                        itemNum:"685-7253"},
+                        {item:"Auditor",
+                        itemNum:"685-7478"},
+                        {item:"Building Inspections",
+                        itemNum:"685-7390"},
+                        {item:"Building Permits",
+                        itemNum:"685-7390"},
+                        {item:"Code Enforcement",
+                        itemNum:"685-7410"},
+                    ]
+                
+            },
         ]
     }
 ]
