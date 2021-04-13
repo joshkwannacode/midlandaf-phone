@@ -15,7 +15,7 @@ export default function InfoList() {
                     <div className="phone-num-main">
 
                     {a.sub.map(b=>{return(
-                        <div>
+                        <div className="phone-num-sub">
                             <h4>{b.subName}</h4>
                             {b.subDetails.map(c=>{return(
                                 <ul>
