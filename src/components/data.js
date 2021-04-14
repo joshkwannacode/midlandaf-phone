@@ -1,6 +1,6 @@
 const data = [
     {
-        mainName:"Government",
+        mainName:"GOVERNMENT",
         sub:[
               {
                 subName:"City of Midland",

@@ -1,7 +1,7 @@
 import React from 'react'
-import data from './data'
+// import data from './data'
 
-export default function InfoList() {
+export default function InfoList({data}) {
     console.log(data)
     return (
         <div className="info-list-main-div">
