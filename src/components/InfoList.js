@@ -21,7 +21,8 @@ export default function InfoList({data}) {
                             {b.subDetails.map(c=>{return(
                                 <div className="phone-num-sub-detail">
                                     <span>{c.item}</span>
-                                    <span>{c.itemNum}</span>
+                                    <span><a href={"tel:+1-"+c.itemNum} style={{color:"black"}}>
+                                        {c.itemNum}</a></span>
                                 </div>
                             )})}
                             </div>
