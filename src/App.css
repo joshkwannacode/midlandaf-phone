@@ -61,7 +61,7 @@ i{
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  margin-top:10px;
+  margin-top:20px;
   /* margin-left:300px */
   font-size: 25px;
   
@@ -69,12 +69,27 @@ i{
 }
 .phone-num-main{
   display:flex;
-  flex-direction:row;
+  flex-direction:column;
   margin-top:10px;
+  
+  
 }
 h4{
-  margin-left:25px;
+  /* margin-left:25px; */
 }
-/* .phone-num-sub{
-  text-align: center;
-} */
+.phone-num-sub{
+  /* background-color: bisque; */
+  background-color: #FEF6E7;
+  height:300px;
+  width:1000px;
+  display:flex;
+  flex-direction:column;
+  flex-wrap: wrap;
+}
+.phone-num-sub-detail{
+  display:flex;
+  flex-direction:column;
+  margin-top:5px;
+  margin-left:5px;
+  
+}

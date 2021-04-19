@@ -2,7 +2,7 @@ import React from 'react'
 // import data from './data'
 
 export default function InfoList({data}) {
-    console.log(data)
+    // console.log(data)
     return (
         <div className="info-list-main-div">
             <p className="info-list-title">
@@ -15,13 +15,16 @@ export default function InfoList({data}) {
                     <div className="phone-num-main">
 
                     {a.sub.map(b=>{return(
-                        <div className="phone-num-sub">
+                        <div >
                             <h4>{b.subName}</h4>
+                            <div className="phone-num-sub">
                             {b.subDetails.map(c=>{return(
-                                <ul>
-                                    <li>{c.item}: {c.itemNum}</li>
-                                </ul>
+                                <div className="phone-num-sub-detail">
+                                    <span>{c.item}</span>
+                                    <span>{c.itemNum}</span>
+                                </div>
                             )})}
+                            </div>
                         </div>
                     )})}
                     </div>

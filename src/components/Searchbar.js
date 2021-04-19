@@ -16,11 +16,29 @@ export default function Searchbar() {
     };
     const handleChange = (event) =>{
         setSearchValue(event.target.value)
+        // const filteredItems = event.target.value?data.filter(items =>{
+        //     return items.sub.map(a=>a.subDetails.map(b=>b.item.toLowerCase()).includes(event.target.value.toLowerCase()));
+        //   }):data
+
+          const filteredItems2 = data.filter(items =>{
+            return items.sub.map(a=>{
+                return a.subDetails.map(b=>{
+                    return b.item.toLowerCase().includes(event.target.value.toLowerCase());
+                })})
+          })
+          setFilteredData(filteredItems2)
+          console.log("j",filteredItems2)
     };
     const handleSearch=()=>{
-        setFilteredData(data.filter(a=>a.mainName.toLowerCase()===searchValue.toLowerCase()))
+        // const filtereditems = e.target.value?items.filter(item =>{
+        //     return item.name.toLowerCase().includes(e.target.value.toLowerCase());
+        //   }):itemBackUp;
+        const filteredItems = data.filter(item =>{
+            return item.mainName.toLowerCase().includes(searchValue.toLowerCase());
+          });
+        setFilteredData(filteredItems)
     };
-    console.log(filteredData)
+    // console.log(filteredData)
     return (
         <>
             {/* <div className="search-bar-main">
