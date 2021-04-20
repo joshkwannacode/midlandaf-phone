@@ -5,6 +5,8 @@ import data from './data'
 export default function Searchbar() {
     const [filteredData,setFilteredData] = useState(data)
     const [searchValue,setSearchValue] = useState();
+    const [isSearch,setIsSearch] = useState(false);
+    const [searchResult, setSearchResult] = useState();
 
     const handleClick=(id)=>{
         if(id==="ALL"){
@@ -14,42 +16,60 @@ export default function Searchbar() {
         }
         
     };
-    const handleChange = (event) =>{
-        setSearchValue(event.target.value)
+    const handleChange = (event) => {
+        setSearchValue(event.target.value);
         const searchS = event.target.value;
-        for(let i=0; i<data.length-1;i++){
-            let subs = data[i];
-            if(subs.mainName.toLowerCase().includes(searchS.toLowerCase())){
-                return console.log("equals",data[i].mainName)
+    
+        const newArray = [];
+        const secondArray =[];
+        
+    
+        for (let i = 0; i < data.length - 1; i++)
+        {
+          let sub1 = data[i];
+          if (sub1.mainName.toLowerCase().includes(searchS.toLowerCase()))
+          {
+            // console.log('mainName', data[i].mainName);
+            // newArray.push(sub1)
+           
+          }
+      
+          for (let a = 0; a < sub1.sub.length - 1; a++)
+          {
+            let sub2 = sub1.sub[a];
+      
+            if (sub2.subName.toLowerCase().includes(searchS.toLowerCase()))
+            {
+            //   console.log('subName', sub2.subName);
+            //   newArray.push(sub2)
+            //   setSearchResult(newArray);
             }
-
-            for(let a=0;a<subs.sub.length-1;a++){
-                let subs2 = subs.sub[a]
-
-                if(subs2.subName.toLowerCase().includes(searchS.toLowerCase())){
-                    return console.log("equals3",subs2.subName)
-                }
-
-                for(let b=0;b<subs2.subDetails.length-1;b++){                    
-                    let jackpot =subs2.subDetails[b].item.toLowerCase();
-                    
-
-                    const findItems= data.find(f=>{
-                        return(f.subs2.subDetails[b].item.toLowerCase().includes(searchS.toLowerCase()))
-                    })
-                    if(jackpot.includes(searchS.toLowerCase())){ 
-                        console.log("equals4",findItems)
-                        // setFilteredData(filteredItems)
-                    }
-                    
-                    
-                }
+      
+            for (let b = 0; b < sub2.subDetails.length - 1; b++)
+            {
+              let last = sub2.subDetails[b].item.toLowerCase();
+              
+              if (last.includes(searchS.toLowerCase()))
+              {
+                setIsSearch(true);
+                newArray.push({
+                    item: sub2.subDetails[b].item,
+                    itemNum: sub2.subDetails[b].itemNum,
+                    subName: sub2.subName,
+                    // mainName: sub1.mainName.toLowerCase(),  
+                  });
+                  setSearchResult(newArray);
+               
+              }
             }
+          }
         }
         
-        //   setFilteredData(filteredItems2)
+        // setIsSearch(false);
+        if(event.target.value.length<=0)return setIsSearch(false);
+        console.log("newArray",newArray)
         
-    };
+      };
     const handleSearch=()=>{
         
         const filteredItems = data.filter(item =>{
@@ -57,14 +77,14 @@ export default function Searchbar() {
           });
         setFilteredData(filteredItems)
     };
-    // console.log(filteredData)
+    // console.log("filtered data",filteredData)
     return (
         <>
-            {/* <div className="search-bar-main">
-            <i className="fa fa-search" onClick={handleSearch}></i>
+            <div className="search-bar-main">
+            {/* <i className="fa fa-search" onClick={handleSearch}></i> */}
                 
                 <input type="text" id="search" name="search" placeholder="Search" onChange={handleChange}/>    
-            </div> */}
+            </div>
 
             <div className="select-info-main">
                 <h3 className="search-info-txt" onClick={()=>handleClick("ALL")}>
@@ -85,7 +105,7 @@ export default function Searchbar() {
                     VEHICLE</h3>
             </div>
 
-            <InfoList data={filteredData}/>
+            <InfoList data={filteredData} isSearch={isSearch} searchResult={searchResult}/>
         </>
     )
 }
