@@ -102,6 +102,29 @@ h4{
   padding-right: 50px;
 }
 
+@media (max-width: 330px){
+  .phone-num-sub{
+    height:500px;
+    width:150px !important;
+    font-size:10px;   
+  }
+  .search-info-txt{
+    font-size: 5px !important;
+  }
+  .info-list-title{
+    font-size: 12px !important;
+  }
+  .info-list-title2{
+    font-size: 12px;
+  }
+  .phone-num-main-name{
+    font-size: 12px;
+  }
+  .searched-main-div{
+    font-size:10px;
+     
+  }
+}
 @media (max-width: 375px){
   .phone-num-sub{
     height:500px;
