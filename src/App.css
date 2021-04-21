@@ -101,3 +101,67 @@ h4{
   padding-left: 50px;
   padding-right: 50px;
 }
+
+@media (max-width: 375px){
+  .phone-num-sub{
+    height:500px;
+    width:300px;
+    font-size:10px;   
+  }
+  .search-info-txt{
+    font-size: 5px !important;
+  }
+  .info-list-title{
+    font-size: 12px !important;
+  }
+  .info-list-title2{
+    font-size: 12px;
+  }
+  .phone-num-main-name{
+    font-size: 12px;
+  }
+  .searched-main-div{
+    font-size:10px;
+     
+  }
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-size: 10px;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    font-size: 10px;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    font-size: 10px;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    font-size: 10px;
+  }
+}
+@media (max-width: 500px){
+  .phone-num-sub{
+    height:400px !important;
+    width:320px !important;
+    font-size:10px !important;   
+  }
+  .search-info-txt{
+    font-size: 7px;
+  }
+  .info-list-title{
+    font-size: 14px;
+  }
+  .info-list-title2{
+    font-size: 14px;
+  }
+  .phone-num-main-name{
+    font-size: 14px;
+  }
+  .searched-main-div{
+    font-size:10px; 
+  }
+}
+@media (max-width: 768px){
+  .phone-num-sub{
+    height:400px;
+    width:650px;   
+  }
+}

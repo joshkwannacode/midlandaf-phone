@@ -7,7 +7,7 @@ export default function InfoList({data,isSearch,searchResult}) {
         <div className="info-list-main-div">
             <p className="info-list-title">
                 <strong>NUMBERS&nbsp;</strong> YOU NEED TO KNOW</p>
-                <p>Area code is (432) unless otherwise noted.</p>
+                <p className="info-list-title2">Area code is (432) unless otherwise noted.</p>
 
                 {!isSearch?data.map(a=>{return(
                     <div>
