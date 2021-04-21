@@ -9,6 +9,7 @@ export default function Searchbar() {
     const [searchResult, setSearchResult] = useState();
 
     const handleClick=(id)=>{
+        setIsSearch(false);
         if(id==="ALL"){
             setFilteredData(data)
         }else{
@@ -67,7 +68,7 @@ export default function Searchbar() {
 
     const handleSearch=()=>{
         const newArray = [];
-        if(searchValue===undefined){ setFilteredData(data); setIsSearch(true); }
+        if(searchValue===undefined){ setIsSearch(false); }
         else{
         for (let i = 0; i < data.length - 1; i++)
         {
