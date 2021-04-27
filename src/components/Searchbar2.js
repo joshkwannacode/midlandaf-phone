@@ -21,13 +21,14 @@ export default function Searchbar() {
     const handleChange = (event) => {
         setSearchValue(event.target.value);
         const searchItem = event.target.value;
+        setIsSearch(true);
 
-        const filtereditems = data2.filter(itema =>{
+        const filtereditems = event.target.value?data2.filter(itema =>{
             return itema.mainName.toLowerCase().includes(searchItem.toLowerCase())||
             itema.subName.toLowerCase().includes(searchItem.toLowerCase())||
             itema.item.toLowerCase().includes(searchItem.toLowerCase());
-          });
-
+          }):data;
+            setSearchResult(filtereditems)
           console.log("filtered",filtereditems)
           
         

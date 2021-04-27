@@ -35,7 +35,7 @@ export default function InfoList({data,isSearch,searchResult}) {
                     <h3 style={{textAlign:"center",marginBottom:"30px"}}>Search Results</h3>
                     {searchResult.map(a=>{
                         return(<div className="searched-main-div">
-                                <h4>{a.mainName}</h4>
+                                {/* <h4>{a.mainName}</h4> */}
                                 <p><strong>{a.subName?a.subName:null}  </strong> {a.item}: <span>
                                     <a href={"tel:+1-"+a.itemNum} style={{color:"black"}}>
                                         {a.itemNum}</a></span></p>
